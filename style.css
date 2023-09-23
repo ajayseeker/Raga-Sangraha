@@ -1,0 +1,27 @@
+.card-image{
+    float:left;
+    width:"100px" !important; 
+    height:"100px" !important; 
+    margin-right: 3%;
+}
+.raga-card-para{
+    font-family: 'Open Sans', sans-serif;
+    width: 90%;
+}
+.raga-card{
+    margin-bottom: 3%;
+}
+
+.peacockFeather-div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    font-family: 'Kenia', cursive;
+}
+
+.peacockFeather-icon{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
