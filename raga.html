@@ -4,14 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yaman</title>
-    
+    <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
+    crossorigin="anonymous"> 
     <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
     crossorigin="anonymous"
   />
-<link rel="stylesheet" href="./raga.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./raga.css" />
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" 
+    crossorigin="anonymous">
+  </script>
 </head>
 <body>
     <!-- Header -->
@@ -25,22 +37,25 @@
         <h2 >Raga Description</h2>
         <hr>
       </div>
+   
+      <div class="raga-details">
+        <p><b>Thaat</b> :- Kalyan (Ashraya raag)</p>
+        <p><b>Jaati</b> :- Sampoorna - Sampoorna</p>
+        <p><b>Samaya</b> :- Ratri ka pratham prahar</p>
+        <br>
+        <p><b>Aaroh</b> :- <span class="sargam">sa re ga Ma pa dha ne</span></p>
+        <p><b>Avaroh</b> :-<span class="sargam"><span>sa&#775;</span> ne dha pa Ma ga re</span></p>
+        <p><b>Pakad</b> :- <span class="sargam"><span class="bottom-dot">n</span>e re ga re sa, pa re, Ma dha ni, ga re sa</span></p>
+        <br>
+        <p><b>Vaadi</b> :- ga</p>
+        <p><b>Samvaadi</b> :- ne</p>
+        <p><b>Nyaas</b> :- sa, ga, pa</p>
+      </div>
 
-        <p>Thaat :- Kalyan (Ashraya raag)</p>
-        <p>Jaati :- Sampoorna - Sampoorna</p>
-        <p>Samaya :- Ratri ka pratham prahar</p>
-        <br>
-        <p>Aaroh :- sa re ga Ma pa dha ne</p>
-        <p>Avaroh :- sa ne dha pa Ma ga re</p>
-        <p>Pakad :- ne re ga re sa, pa re, Ma dha ni, ga re sa</p>
-        <br>
-        <p>Vaadi :- ga</p>
-        <p>Samvaadi :- ne</p>
-        <p>Nyaas :- sa, ga, pa</p>
-        <hr>
-      
-        <div class="swar-malika">
-          <h3 class="swar-malika-heading">Swar Malika</h3>
+      <hr>
+
+      <div class="swar-malika sargam">
+          <h3 class="description">Swar Malika</h3>
           <div class="row mb-3 text-left">
             <div class="col-3 themed-grid-col">0</div>
             <div class="col-3 themed-grid-col">3</div>
@@ -90,8 +105,8 @@
 
        </div>
 
-       <div class="swar-malika">
-        <h3 class="swar-malika-heading">Bandish</h3>
+      <div class="swar-malika sargam">
+        <h3 class="description">Bandish</h3>
         <div class="row mb-3 text-left">
           <div class="col-3 themed-grid-col">0</div>
           <div class="col-3 themed-grid-col">3</div>
@@ -183,10 +198,37 @@
           <div class="col-3 themed-grid-col">Bha ta ka ta</div>
           <div class="col-3 themed-grid-col">Tu Fi ra ta</div>
         </div>
-     </div>
       </div>
 
-    
+    <!-- Youtube Videos -->
+    <h3 class="description">YouTube Videos</h3>
+    <hr>
+      <div class="container videos">
+        <div class="video">
+          <iframe width="420" height="315"
+          src="https://www.youtube.com/embed/3kBuDppKJMQ">
+          </iframe>
+        </div>
+        <div class="video">
+          <iframe width="420" height="315"
+            src="https://www.youtube.com/embed/agVv2IVvoAA">
+          </iframe>
+        </div>
+        <div class="video">
+          <iframe width="420" height="315"
+            src="https://www.youtube.com/embed/p6gptdsAYHE">
+          </iframe>
+        </div>
+        <div class="video">
+          <iframe width="420" height="315"
+          src="https://www.youtube.com/embed/T4R6SJkLo4k">
+          </iframe>
+        </div>
+      </div>
+
+   </div>
+
+
     <!-- Footer -->
     <div class="container">
         <footer

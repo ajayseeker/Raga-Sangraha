@@ -20,9 +20,21 @@ header{
     border: 1px solid rgba(112.520718, 44.062154, 249.437846, .3);
 }
 
+.raga-details{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    font-size: x-large;
+    
+}
+
+.sargam{
+    font-family: 'Hind', sans-serif;
+    font-size: x-large;
+}
 .description{
     text-align: center;
-    padding: 5%;
+    padding-top: 5%;
 }
 
 .swar-malika{
@@ -30,5 +42,29 @@ header{
 }
 
 .swar-malika-heading{
+    padding-bottom: 2%;
+}
+
+.youtube-videos{
+    padding-bottom: 3%;
+    padding-top: 5%;
+}
+
+.hobby-card{
+    display: flex;
+    justify-content: center;
+}
+.hobby-card iframe{
+    height: 80vh;
+    width: 60vh;
+}
+
+.videos{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.video{
     padding-bottom: 2%;
 }
