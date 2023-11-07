@@ -7,3 +7,28 @@ header{
 .raga-header{
     padding: 2%;
 }
+
+.bottom-dot{
+    text-emphasis-style: dot;
+    text-emphasis-position: under left; 
+}
+
+.themed-grid-col {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    background-color: rgba(112.520718, 44.062154, 249.437846, .15);
+    border: 1px solid rgba(112.520718, 44.062154, 249.437846, .3);
+}
+
+.description{
+    text-align: center;
+    padding: 5%;
+}
+
+.swar-malika{
+    padding: 5%;
+}
+
+.swar-malika-heading{
+    padding-bottom: 2%;
+}
