@@ -7,3 +7,34 @@ header{
 .raga-header{
     padding: 2%;
 }
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-gap: 10px;
+    min-width: 400px;
+    background-color: #fff;
+    color: #444;
+  }
+  
+  .swar-malika{
+    width: 80%;
+    height: 30%;
+  }
+
+  .raga-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  .item{
+    align-self: center;
+    padding: 4%;
+  }
+
+  .image{
+    transform: rotate(1deg)
+  }
