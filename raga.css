@@ -30,3 +30,21 @@
   .box{
     font-size: large;
   }
+
+  komal {
+    border-bottom: 1px solid black;
+    }
+  
+  mandra {
+    text-emphasis-style: dot;
+    text-emphasis-position: under left;
+    -webkit-text-emphasis-style: dot;
+    -webkit-text-emphasis-position: under;
+  }
+
+  tar{
+      text-emphasis-style: dot;
+      text-emphasis-position: top left;
+      -webkit-text-emphasis-style: dot;
+      -webkit-text-emphasis-position: top;
+  }
