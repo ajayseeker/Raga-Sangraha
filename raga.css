@@ -1,22 +1,10 @@
 
-header{
+.header-div{
     text-align: center;
-    border-bottom: 1px black solid
-}
-
-.raga-header{
+    border-bottom: 1px black solid;
+    background-color: #C3E2C2;
     padding: 2%;
 }
-
-
-.wrapper {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-gap: 10px;
-    min-width: 400px;
-    background-color: #fff;
-    color: #444;
-  }
   
   .swar-malika{
     width: 80%;
@@ -28,8 +16,8 @@ header{
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
+    background-color: #EAECCC;
   }
-
   .item{
     align-self: center;
     padding: 4%;
@@ -37,4 +25,8 @@ header{
 
   .image{
     transform: rotate(1deg)
+  }
+
+  .box{
+    font-size: large;
   }
