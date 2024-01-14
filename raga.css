@@ -1,16 +1,32 @@
 
-.header-div{
-    text-align: center;
-    border-bottom: 1px black solid;
-    background-color: #C3E2C2;
-    padding: 2%;
-}
+  .header-div{
+      text-align: center;
+      border-bottom: 1px black solid;
+      background-color: #C3E2C2;
+      padding: 2%;
+      display: grid;
+      grid-template-columns: 20%  80%;
+  }
+
+  .item{
+    justify-self: center;
+  }
+
+  .item img{
+    height: 60%;
+    width: 60%;
+  }
   
   .swar-malika{
     width: 80%;
     height: 30%;
   }
 
+  .ragaName{
+    margin-left: -25%;
+  }
+
+ 
   .raga-desc{
     display: flex;
     flex-direction: column;
@@ -18,6 +34,7 @@
     text-align: center;
     background-color: #EAECCC;
   }
+
   .item{
     align-self: center;
     padding: 4%;
@@ -33,7 +50,7 @@
 
   komal {
     border-bottom: 1px solid black;
-    }
+  }
   
   mandra {
     text-emphasis-style: dot;
