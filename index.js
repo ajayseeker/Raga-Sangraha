@@ -1,4 +1,18 @@
 const filePath = "resources/Raga-Information.json";
+
+// adding event handler to search text box
+const inp = document.getElementsByClassName("form-control")[0];
+inp.addEventListener("input", searchText);
+
+//Saving the raw raga-card template, to be used later
+const ragaInfo = getRagaInfo();
+var ragaCard =  document.getElementsByClassName("raga-card")[0];
+
+//emptying the raw raga-card element present
+var ragaCardParentDiv = document.getElementById("raga-description");
+ragaCardParentDiv.removeChild(ragaCard);
+
+//Reads the json file $"filePath" and return its content as a promise
 async function getRagaInfo() { 
     const prom =  await fetch(filePath); 
     const info = await prom.json();
@@ -6,26 +20,43 @@ async function getRagaInfo() {
     return info;
 }
 
-const ragaInfo = getRagaInfo();
-var ragaCard =  document.getElementsByClassName("raga-card")[0];
-
-var ragaCardParentDiv = document.getElementById("raga-description");
-console.log(ragaCardParentDiv);
-ragaCardParentDiv.removeChild(ragaCard);
-
-
+//event handler which redirects to the selected raga page 
 function ragaExplored(event)
 {
-      console.log("ragaExplored Hit!");
-      console.log(event.srcElement);
       var ragaName = String(event.srcElement.innerHTML);
-      console.log(ragaName);
       window.location.href="./raga.html?raga-name="+ragaName;
+}
+
+//event handler to filter ragas by the text entered in Search Box
+async function searchText(event){
+    const ragasElems = [...document.getElementsByClassName("raga-card")];
+
+    for(var elem of ragasElems){
+        ragaCardParentDiv.removeChild(elem);
+    }
+
+    let search = event.target.value.toLowerCase();
+    const info = await ragaInfo;
+
+    for(const [key, value] of Object.entries(info)){
+        if(key.toLowerCase().includes(search) !== true) continue;
+        
+        var card = ragaCard.cloneNode(true);
+        var ragaName = card.getElementsByClassName("name")[0];
+        ragaName.innerText = key;
+
+        var descriptionElem = card.getElementsByClassName("description")[0];
+        descriptionElem.innerText = info[key]["_description_"];
+
+        let link = card.getElementsByClassName("icon-link")[0];
+        link.addEventListener("click", ragaExplored);
+
+        ragaCardParentDiv.appendChild(card);
+    }
 }
 
 (async () =>{
     const info = await ragaInfo;
-    console.log(info);
     for(const [key, value] of Object.entries(info)){
         // console.log(key);
         var card = ragaCard.cloneNode(true);
@@ -39,7 +70,6 @@ function ragaExplored(event)
         let link = card.getElementsByClassName("icon-link")[0];
         link.addEventListener("click", ragaExplored);
 
-        console.log(key);
         ragaCardParentDiv.appendChild(card);
     }
 } )();
