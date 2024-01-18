@@ -23,8 +23,10 @@ async function getRagaInfo() {
 //event handler which redirects to the selected raga page 
 function ragaExplored(event)
 {
-      var ragaName = String(event.srcElement.innerHTML);
-      window.location.href="./raga.html?raga-name="+ragaName;
+    let buttonElem = event.srcElement;
+    let ragaName = buttonElem.getAttribute("raga");
+    // var ragaName = String(event.srcElement.innerHTML);
+    window.location.href="./raga.html?raga-name="+ragaName;
 }
 
 //event handler to filter ragas by the text entered in Search Box
@@ -47,9 +49,10 @@ async function searchText(event){
 
         var descriptionElem = card.getElementsByClassName("description")[0];
         descriptionElem.innerText = info[key]["_description_"];
-
-        let link = card.getElementsByClassName("icon-link")[0];
+        
+        let link = card.getElementsByClassName("btn-info")[0];
         link.addEventListener("click", ragaExplored);
+        link.setAttribute("raga", key);
 
         ragaCardParentDiv.appendChild(card);
     }
@@ -58,18 +61,26 @@ async function searchText(event){
 (async () =>{
     const info = await ragaInfo;
     for(const [key, value] of Object.entries(info)){
-        // console.log(key);
         var card = ragaCard.cloneNode(true);
-        // console.log(card);
+        
+        //setting the raga name in card
         var ragaName = card.getElementsByClassName("name")[0];
         ragaName.innerText = key;
 
+        //Setting the raga description in the card
         var descriptionElem = card.getElementsByClassName("description")[0];
         descriptionElem.innerText = info[key]["_description_"];
 
-        let link = card.getElementsByClassName("icon-link")[0];
+        //subscribing to the click event of button
+        let link = card.getElementsByClassName("btn-info")[0];
         link.addEventListener("click", ragaExplored);
 
+        //Adding additional attribute of raga to the button.
+        //This shall be used in the click event handler to determine which raga is clicked.
+        let button = card.getElementsByClassName("btn-info")[0];
+        button.setAttribute("raga", key);
+        
+        //adding the card to the page
         ragaCardParentDiv.appendChild(card);
     }
 } )();
