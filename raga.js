@@ -4,6 +4,9 @@ async function getRagaInfo() {
     const info = await prom.json();
     return info;
 }
+function takeMeHome(){
+    window.location = "index.html";
+}
 function getUrlVars()
 {
       var vars = [], hash;
